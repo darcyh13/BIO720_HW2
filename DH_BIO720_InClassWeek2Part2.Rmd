@@ -1,0 +1,43 @@
+---
+title: "DH_BIO720_InClassWeek2"
+output: html_document
+---
+
+1. In the first one x is set to 1, 1 is added to this variable, and then this output is printed (x). x is then 2 and 1 is added again, and the output printed. This repeats until x is set to 9, because the for includes (i in 1:9), x does not get set higher than 9 because this loop only repeats 9 times. For this example, x needs to be defined and then the for loop can be executed. 
+
+In the second examples, a function is created. Similarly, in this for loop 1 gets added to x. However, this repeats ten times because the for loop includes (i in 1:10). A major difference in this examples is because it is a function you can call any number into countfun().
+
+2.
+```{r}
+x <- NA
+system.time( for (i in 1:10000) {
+    print(i^2) 
+})
+
+
+x <- rep(NA, length = 10000)
+system.time( for (i in 1:10000) {
+    print(i^2) 
+})
+
+```
+
+
+
+3. When you pre-allocate a vector it makes it faster. This is proven with above example. 
+
+
+4. 
+```{r}
+rm(x)
+x <- 1:10000
+system.time(x <- x^2)
+```
+
+5. Vectorizing is an advantage( as it is faster) and when possible you should do this. 
+
+6.
+
+7.
+
+
